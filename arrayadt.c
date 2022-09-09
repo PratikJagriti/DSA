@@ -11,7 +11,7 @@ struct array
 void display(struct array arr)
 {
 	int i;
-    printf("The elements are:\n");
+	printf("The elements are:\n");
 	for (i = 0; i < arr.length; i++)
 		printf("%d ", arr.A[i]);
 }
@@ -31,5 +31,5 @@ int main()
 	for (i = 0; i < n; i++)
 		scanf("%d", &arr.A[i]);
 	arr.length = n;
-	display(arr);
+    display(arr);
 }

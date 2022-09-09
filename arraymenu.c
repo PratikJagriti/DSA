@@ -80,7 +80,7 @@ int main()
 	arr.length = 0;
 
 	do {
-		printf("\nMenu\n");
+		printf("Menu\n");
 		printf("1.Insert\n2.Delete\n3.Search\n4.Sum\n5.Display\nPress any other key to exit\n");
 		printf("Enter your choice:");
 		scanf("%d", &ch);

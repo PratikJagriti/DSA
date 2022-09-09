@@ -6,33 +6,33 @@ struct matrix
     int n;
 };
 
-void set(struct matrix *m,int i,int j,int x)
+void set(struct matrix* m, int i, int j, int x)
 {
-    if(i==j)
+    if (i == j)
     {
-        m->a[i-1]=x;
+        m->a[i - 1] = x;
     }
 }
 
-int get(struct matrix m,int i,int j)
+int get(struct matrix m, int i, int j)
 {
-    if(i==j)
-    return m.a[i-1];
+    if (i == j)
+        return m.a[i - 1];
     else
-    return 0;
+        return 0;
 }
 
 void display(struct matrix m)
 {
-    int i,j;
-    for(i=0;i<m.n;i++)
+    int i, j;
+    for (i = 0; i < m.n; i++)
     {
-        for(j=0;j<m.n;j++)
+        for (j = 0; j < m.n; j++)
         {
-            if(i==j)
-            printf("%d ",m.a[i]);
+            if (i == j)
+                printf("%d ", m.a[i]);
             else
-            printf("0 ");
+                printf("0 ");
         }
         printf("\n");
     }
@@ -41,9 +41,10 @@ void display(struct matrix m)
 int main()
 {
     struct matrix m;
-    m.n=5;
-    set(&m,1,1,5);set(&m,2,2,7);set(&m,3,3,3);set(&m,4,4,8);set(&m,5,5,1);
+    m.n = 5;
+    set(&m, 1, 1, 5); set(&m, 2, 2, 7); set(&m, 3, 3, 3); set(&m, 4, 4, 8); set(&m, 5, 5, 1);
     display(m);
-    printf("%d\n",get(m,2,2));
+    printf("%d\n", get(m, 2, 2));
+    printf("%d\n", get(m, 5, 2));
     return 0;
 }
